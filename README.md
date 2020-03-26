@@ -1,2 +1,5 @@
-# aanet
-Code for "AANet: Adaptive Aggregation Network for Efficient Stereo Matching", CVPR 2020
+# AANet
+
+A versatile pytorch framework for efficient and accurate stereo matching at **62ms**!
+
+**Coming soon!**
