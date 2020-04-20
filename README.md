@@ -8,9 +8,9 @@ Authors: Haofei Xu and [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/)
 
 We propose a sparse points based intra-scale cost aggregation (ISA) module and a cross-scale cost aggregation (CSA) module for efficient and accurate stereo matching. 
 
-<p align="center"><img width=80% src="assets/overview.png"></p>
-
 The implementation of improved version **AANet+ (stronger performance & slightly faster speed)** is also included in this repo.
+
+<p align="center"><img width=80% src="assets/overview.png"></p>
 
 ## Highlights
 
