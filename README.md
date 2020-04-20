@@ -16,7 +16,11 @@ The implementation of improved version **AANet+ (stronger performance & slightly
 
 - **Modular design**
 
-  We decompose the end-to-end stereo matching framework into five components: **feature extraction**, **cost volume construction**, **cost aggregation**, **disparity computation** and **disparity refinement.** One can easily construct a customized stereo matching model by combining different components.
+  We decompose the end-to-end stereo matching framework into five components: 
+
+  **feature extraction**, **cost volume construction**, **cost aggregation**, **disparity computation** and **disparity refinement.** 
+
+  One can easily construct a customized stereo matching model by combining different components.
 
 - **High efficiency**
 
