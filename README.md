@@ -2,7 +2,7 @@
 
 PyTorch implementation of our paper: 
 
-**AANet: Adaptive Aggregation Network for Efficient Stereo Matching**, [CVPR 2020](http://cvpr2020.thecvf.com/)
+**[AANet: Adaptive Aggregation Network for Efficient Stereo Matching](https://arxiv.org/abs/2004.09548)**, [CVPR 2020](http://cvpr2020.thecvf.com/)
 
 Authors: Haofei Xu and [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/)
 
