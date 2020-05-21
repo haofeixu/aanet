@@ -145,7 +145,7 @@ def main():
         ori_height, ori_width = left.size()[2:]
 
         # Automatic
-        factor = 48
+        factor = 48 if args.refinement_type != 'hourglass' else 96
         args.img_height = math.ceil(ori_height / factor) * factor
         args.img_width = math.ceil(ori_width / factor) * factor
 
