@@ -80,7 +80,7 @@ For KITTI 2015, you should place `disp_occ_0_pseudo_gt` under `kitti_2015/data_s
 It is recommended to symlink your dataset root to `$AANET/data`:
 
 ```shell
-ln -s $YOUR_DADASET_ROOT data
+ln -s $YOUR_DATASET_ROOT data
 ```
 
 Otherwise, you may need to change the corresponding paths in the scripts.
@@ -127,7 +127,7 @@ and then access [http://localhost:6006](http://localhost:6006) in your browser.
 
 ## Evaluation
 
-To enable fast experimenting, evaluation is running on-the-fly without saving the intermediate results. 
+To enable fast experimenting, evaluation runs on-the-fly without saving the intermediate results. 
 
 We provide two types of evaluation setting:
 
@@ -138,7 +138,7 @@ Check [scripts/aanet_evaluate.sh](scripts/aanet_evaluate.sh) for an example usag
 
 ## Citation
 
-If you find our work useful in you research, please consider citing our paper:
+If you find our work useful in your research, please consider citing our paper:
 
 ```
 @inproceedings{xu2020aanet,
@@ -155,7 +155,7 @@ Please note that all codes are protected by patents. They can only be used for r
 
 ## Acknowledgements
 
-Part of the code is adopted from some previous work: [PSMNet](https://github.com/JiaRenChang/PSMNet), [GwcNet](https://github.com/xy-guo/GwcNet) and [GA-Net](https://github.com/feihuzhang/GANet). We thank the original authors for their awesome repos. The deformable convolution op is taken from [mmdetection](https://github.com/open-mmlab/mmdetection). The code structure is partially inspired by [mmdetection](https://github.com/open-mmlab/mmdetection) and our previous work [rdn4depth](https://github.com/haofeixu/rdn4depth).
+Part of the code is adopted from previous works: [PSMNet](https://github.com/JiaRenChang/PSMNet), [GwcNet](https://github.com/xy-guo/GwcNet) and [GA-Net](https://github.com/feihuzhang/GANet). We thank the original authors for their awesome repos. The deformable convolution op is taken from [mmdetection](https://github.com/open-mmlab/mmdetection). The code structure is partially inspired by [mmdetection](https://github.com/open-mmlab/mmdetection) and our previous work [rdn4depth](https://github.com/haofeixu/rdn4depth).
 
 
 
