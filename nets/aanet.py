@@ -172,10 +172,10 @@ class AANet(nn.Module):
                     else:
                         curr_left_img = F.interpolate(left_img,
                                                       scale_factor=scale_factor,
-                                                      mode='bilinear')
+                                                      mode='bilinear', align_corners=False)
                         curr_right_img = F.interpolate(right_img,
                                                        scale_factor=scale_factor,
-                                                       mode='bilinear')
+                                                       mode='bilinear', align_corners=False)
                     inputs = (disparity, curr_left_img, curr_right_img)
                     disparity = self.refinement[i](*inputs)
                     disparity_pyramid.append(disparity)  # [H/2, H]
@@ -190,10 +190,10 @@ class AANet(nn.Module):
                     else:
                         curr_left_img = F.interpolate(left_img,
                                                       scale_factor=scale_factor,
-                                                      mode='bilinear')
+                                                      mode='bilinear', align_corners=False)
                         curr_right_img = F.interpolate(right_img,
                                                        scale_factor=scale_factor,
-                                                       mode='bilinear')
+                                                       mode='bilinear', align_corners=False)
                     inputs = (disparity, curr_left_img, curr_right_img)
                     disparity = self.refinement[i](*inputs)
                     disparity_pyramid.append(disparity)  # [H/2, H]

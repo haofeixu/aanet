@@ -127,10 +127,11 @@ def main():
                               num_workers=args.num_workers, pin_memory=True, drop_last=True)
 
     # Validation loader
-    val_transform = transforms.Compose([transforms.RandomCrop(args.val_img_height, args.val_img_width,
-                                                              validate=True),
-                                        transforms.ToTensor(),
-                                        transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD)])
+    val_transform_list = [transforms.RandomCrop(args.val_img_height, args.val_img_width, validate=True),
+                          transforms.ToTensor(),
+                          transforms.Normalize(mean=IMAGENET_MEAN, std=IMAGENET_STD)
+                         ]
+    val_transform = transforms.Compose(val_transform_list)
     val_data = dataloader.StereoDataset(data_dir=args.data_dir,
                                         dataset_name=args.dataset_name,
                                         mode=args.mode,
@@ -233,6 +234,7 @@ def main():
             if not args.no_validate:
                 train_model.validate(val_loader)
             if args.lr_scheduler_type is not None:
+                optimizer.step()
                 lr_scheduler.step()
 
         logger.info('=> End training\n\n')

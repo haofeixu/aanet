@@ -393,7 +393,7 @@ class AdaptiveAggregationModule(nn.Module):
                     exchange = self.fuse_layers[i][j](x[j])
                     if exchange.size()[2:] != x_fused[i].size()[2:]:
                         exchange = F.interpolate(exchange, size=x_fused[i].size()[2:],
-                                                 mode='bilinear')
+                                                 mode='bilinear', align_corners=False)
                     x_fused[i] = x_fused[i] + exchange
 
         for i in range(len(x_fused)):
