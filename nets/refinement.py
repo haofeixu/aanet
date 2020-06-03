@@ -43,7 +43,7 @@ class StereoNetRefinement(nn.Module):
         assert low_disp.dim() == 3
         low_disp = low_disp.unsqueeze(1)  # [B, 1, H, W]
         scale_factor = left_img.size(-1) / low_disp.size(-1)
-        disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear')
+        disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear', align_corners=False)
         disp = disp * scale_factor  # scale correspondingly
 
         concat = torch.cat((disp, left_img), dim=1)  # [B, 4, H, W]
@@ -84,7 +84,7 @@ class StereoDRNetRefinement(nn.Module):
         if scale_factor == 1.0:
             disp = low_disp
         else:
-            disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear')
+            disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear', align_corners=False)
             disp = disp * scale_factor
 
         # Warp right image to left view with current disparity
@@ -149,7 +149,7 @@ class HourglassRefinement(nn.Module):
         if scale_factor == 1.0:
             disp = low_disp
         else:
-            disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear')
+            disp = F.interpolate(low_disp, size=left_img.size()[-2:], mode='bilinear', align_corners=False)
             disp = disp * scale_factor
 
         # Warp right image to left view with current disparity

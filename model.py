@@ -95,7 +95,7 @@ class Model(object):
                 if pred_disp.size(-1) != gt_disp.size(-1):
                     pred_disp = pred_disp.unsqueeze(1)  # [B, 1, H, W]
                     pred_disp = F.interpolate(pred_disp, size=(gt_disp.size(-2), gt_disp.size(-1)),
-                                              mode='bilinear') * (gt_disp.size(-1) / pred_disp.size(-1))
+                                              mode='bilinear', align_corners=False) * (gt_disp.size(-1) / pred_disp.size(-1))
                     pred_disp = pred_disp.squeeze(1)  # [B, H, W]
 
                 curr_loss = F.smooth_l1_loss(pred_disp[mask], gt_disp[mask],
@@ -148,7 +148,7 @@ class Model(object):
                 if pred_disp.size(-1) != gt_disp.size(-1):
                     pred_disp = pred_disp.unsqueeze(1)  # [B, 1, H, W]
                     pred_disp = F.interpolate(pred_disp, size=(gt_disp.size(-2), gt_disp.size(-1)),
-                                              mode='bilinear') * (gt_disp.size(-1) / pred_disp.size(-1))
+                                              mode='bilinear', align_corners=False) * (gt_disp.size(-1) / pred_disp.size(-1))
                     pred_disp = pred_disp.squeeze(1)  # [B, H, W]
                 img_summary['disp_error'] = disp_error_img(pred_disp, gt_disp)
 
@@ -252,7 +252,7 @@ class Model(object):
             if pred_disp.size(-1) < gt_disp.size(-1):
                 pred_disp = pred_disp.unsqueeze(1)  # [B, 1, H, W]
                 pred_disp = F.interpolate(pred_disp, (gt_disp.size(-2), gt_disp.size(-1)),
-                                          mode='bilinear') * (gt_disp.size(-1) / pred_disp.size(-1))
+                                          mode='bilinear', align_corners=False) * (gt_disp.size(-1) / pred_disp.size(-1))
                 pred_disp = pred_disp.squeeze(1)  # [B, H, W]
 
             epe = F.l1_loss(gt_disp[mask], pred_disp[mask], reduction='mean')
