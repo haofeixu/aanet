@@ -234,7 +234,6 @@ def main():
             if not args.no_validate:
                 train_model.validate(val_loader)
             if args.lr_scheduler_type is not None:
-                optimizer.step()
                 lr_scheduler.step()
 
         logger.info('=> End training\n\n')
