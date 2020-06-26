@@ -142,10 +142,11 @@ If you find our work useful in your research, please consider citing our paper:
 
 ```
 @inproceedings{xu2020aanet,
-      title={AANet: Adaptive Aggregation Network for Efficient Stereo Matching},
-      author={Xu, Haofei and Zhang, Juyong},
-      booktitle={IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-      year={2020}
+  title={AANet: Adaptive Aggregation Network for Efficient Stereo Matching},
+  author={Xu, Haofei and Zhang, Juyong},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1959--1968},
+  year={2020}
 }
 ```
 
