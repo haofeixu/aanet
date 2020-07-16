@@ -13,6 +13,7 @@ from utils import utils
 from utils.file_io import write_pfm
 from glob import glob
 from utils.file_io import read_img
+from numpy import savez_compressed
 
 IMAGENET_MEAN = [0.485, 0.456, 0.406]
 IMAGENET_STD = [0.229, 0.224, 0.225]
@@ -54,7 +55,7 @@ parser.add_argument('--refinement_type', default='stereodrnet', help='Type of re
 
 parser.add_argument('--pretrained_aanet', default=None, type=str, help='Pretrained network')
 
-parser.add_argument('--save_type', default='png', choices=['pfm', 'png', 'npy'], help='Save file type')
+parser.add_argument('--save_type', default='png', choices=['pfm', 'png', 'npy', 'npz'], help='Save file type')
 parser.add_argument('--visualize', action='store_true', help='Visualize disparity map')
 
 # Log
@@ -187,6 +188,9 @@ def main():
         elif args.save_type == 'npy':
             save_name = save_name[:-3] + 'npy'
             np.save(save_name, disp)
+        elif args.save_type == 'npz':
+            save_name = save_name[:-3] + 'npz'
+            savez_compressed(save_name, disp)
         else:
             skimage.io.imsave(save_name, (disp * 256.).astype(np.uint16))
 
