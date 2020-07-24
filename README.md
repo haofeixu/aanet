@@ -150,9 +150,6 @@ If you find our work useful in your research, please consider citing our paper:
 }
 ```
 
-## License
-
-Please note that all codes are protected by patents. They can only be used for research purposes. If you are interested in commercial/for-profit purposes, please contact [Juyong Zhang](mailto:juyong@ustc.edu.cn).
 
 ## Acknowledgements
 
