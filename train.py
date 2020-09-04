@@ -76,10 +76,10 @@ parser.add_argument('--highest_loss_only', action='store_true', help='Only use l
 parser.add_argument('--load_pseudo_gt', action='store_true', help='Load pseudo gt for supervision')
 
 # Log
-parser.add_argument('--print_freq', default=100, type=int, help='Print frequency to screen')
-parser.add_argument('--summary_freq', default=100, type=int, help='Summary frequency to tensorboard')
+parser.add_argument('--print_freq', default=100, type=int, help='Print frequency to screen (iterations)')
+parser.add_argument('--summary_freq', default=100, type=int, help='Summary frequency to tensorboard (iterations)')
 parser.add_argument('--no_build_summary', action='store_true', help='Dont save sammary when training to save space')
-parser.add_argument('--save_ckpt_freq', default=10, type=int, help='Save checkpoint frequency')
+parser.add_argument('--save_ckpt_freq', default=10, type=int, help='Save checkpoint frequency (epochs)')
 
 parser.add_argument('--evaluate_only', action='store_true', help='Evaluate pretrained models')
 parser.add_argument('--no_validate', action='store_true', help='No validation')
