@@ -6,7 +6,7 @@ PyTorch implementation of our paper:
 
 Authors: [Haofei Xu](https://haofeixu.github.io/) and [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/)
 
-**11/13/2022 Update: Check out our new work: [Unifying Flow, Stereo and Depth Estimation](https://haofeixu.github.io/unimatch/) and code: [unimatch](https://github.com/autonomousvision/unimatch) for performing stereo matching with our new GMStereo model. The CUDA op in AANet is no longer required. [10 pretrained GMStereo models](https://github.com/autonomousvision/unimatch/blob/master/MODEL_ZOO.md) with different speed-accuracy trade-offs are also released. Check out the [Colab](https://colab.research.google.com/drive/1r5m-xVy3Kw60U-m5VB-aQ98oqqg_6cab?usp=sharing) to play with GMStereo in your browser!**
+**11/13/2022 Update: Check out our new work: [Unifying Flow, Stereo and Depth Estimation](https://haofeixu.github.io/unimatch/) and code: [unimatch](https://github.com/autonomousvision/unimatch) for performing stereo matching with our new GMStereo model. The CUDA op in AANet is no longer required. [10 pretrained GMStereo models](https://github.com/autonomousvision/unimatch/blob/master/MODEL_ZOO.md) with different speed-accuracy trade-offs are also released. Check out our [Colab demo](https://colab.research.google.com/drive/1r5m-xVy3Kw60U-m5VB-aQ98oqqg_6cab?usp=sharing) to play with GMStereo in your browser!**
 
 We propose a sparse points based intra-scale cost aggregation (ISA) module and a cross-scale cost aggregation (CSA) module for efficient and accurate stereo matching. 
 
